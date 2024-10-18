@@ -51,8 +51,8 @@ class BottomSection extends StatelessWidget {
         Offstage(
           offstage: !hideCircleRow,
           child: const BottomSheetImageWidget().slideInFromBottom(
-            delay: 2700.ms,
-            animationDuration: 1200.ms,
+            delay: 2000.ms,
+            animationDuration: 1000.ms,
             begin: 1,
           ),
         ),

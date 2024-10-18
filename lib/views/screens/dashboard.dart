@@ -142,7 +142,7 @@ class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin
                 ),
               ),
             ).slideInFromBottom(
-              delay: 3000.ms, animationDuration: 2500.ms, begin: 0.9,
+              delay: 3000.ms, animationDuration: 2000.ms, begin: 0.9,
             ),
           ),
         ],

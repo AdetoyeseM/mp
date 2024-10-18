@@ -17,7 +17,7 @@ class AppStyles {
   );
 
   static final TextStyle offersCountStyle = GoogleFonts.manrope(
-    fontSize: 32,   
+    fontSize: 35,   
     fontWeight: FontWeight.bold,
     color: MoniepointColor.primaryColor,
   );

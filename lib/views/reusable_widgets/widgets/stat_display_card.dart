@@ -35,6 +35,7 @@ class StatsDisplayCard extends StatelessWidget {
               IncrementalCounter(
                 finalValue: counterValue,
                 textStyle: AppStyles.offersCountStyle.copyWith(
+                  fontSize: 44,
                   color: isCircle
                       ? MoniepointColor.whiteColor
                       : MoniepointColor.blackColor,
@@ -42,7 +43,7 @@ class StatsDisplayCard extends StatelessWidget {
               ),
               Text(
                 'offers',
-                style: context.textTheme.bodySmall?.copyWith(
+                style: context.textTheme.bodyMedium?.copyWith(
                   color: isCircle ? context.colorScheme.surface : null,
                 ),
               ),

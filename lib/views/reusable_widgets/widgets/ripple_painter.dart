@@ -10,9 +10,9 @@ class RipplePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = MoniepointColor.whiteColor.withOpacity(0.9)
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = strokeWidth ?? 5;
+      ..color = MoniepointColor.primaryColor .withOpacity(0.9)
+      ..style = PaintingStyle.fill
+      ..strokeWidth = strokeWidth ?? 2;
 
     final center = Offset(size.width / 2, size.height / 2);
 

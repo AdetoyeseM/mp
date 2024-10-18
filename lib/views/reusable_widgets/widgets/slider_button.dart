@@ -27,15 +27,13 @@ class GridImageContainer extends StatefulWidget {
 }
 
 class GridImageContainerState extends State<GridImageContainer> {
-  late ValueNotifier<bool> isSliderTransformed;
-  late ValueNotifier<bool> isTextHidden;
+  late ValueNotifier<bool> isSliderTransformed; 
   late ValueNotifier<int> animationDurationNotifier;
 
   @override
   void initState() {
     super.initState();
-    isSliderTransformed = ValueNotifier<bool>(false);
-    isTextHidden = ValueNotifier<bool>(true);
+    isSliderTransformed = ValueNotifier<bool>(false); 
     animationDurationNotifier = ValueNotifier<int>(widget.animationDurationMs);
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -48,8 +46,7 @@ class GridImageContainerState extends State<GridImageContainer> {
 
   @override
   void dispose() {
-    isSliderTransformed.dispose();
-    isTextHidden.dispose();
+    isSliderTransformed.dispose(); 
     animationDurationNotifier.dispose();
     super.dispose();
   }
@@ -78,8 +75,7 @@ class GridImageContainerState extends State<GridImageContainer> {
                     ? context.sizeWidth(widget.sliderWidthPercentage ?? 0.8)
                     : 45,
                 height: 42,
-                onEnd: () {
-                  isTextHidden.value = false;
+                onEnd: () { 
                 },
                 decoration: BoxDecoration(
                   color: context.colorScheme.primaryContainer.withOpacity(0.8),
@@ -92,27 +88,18 @@ class GridImageContainerState extends State<GridImageContainer> {
                   fit: StackFit.expand,
                   children: [
                     Align(
-                      child: ValueListenableBuilder<bool>(
-                        valueListenable: isTextHidden,
-                        builder: (context, isHiddenValue, child) {
-                          return isHiddenValue
-                              ? const SizedBox(
-                                  height: 0,
-                                  width: 0,
-                                )
-                              : Text(
-                                  widget.displayText,
-                                  style: AppStyles.offersCountStyle.copyWith(
-                                    fontSize: 12,
-                                    color: MoniepointColor.blackColor,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                  maxLines: 1,
-                                  textAlign: TextAlign.center,
-                                ).fadeInFromLeft(
-                                  delay: 100.ms, animationDuration: 100.ms);
-                        },
-                      ),
+                      alignment: AlignmentDirectional.center,
+                      child: Text(
+                              widget.displayText,
+                              style: AppStyles.offersCountStyle.copyWith(
+                                fontSize: 12,
+                                color: MoniepointColor.blackColor,
+                                fontWeight: FontWeight.w500,
+                              ),
+                              maxLines: 1,
+                              textAlign: TextAlign.left,
+                            ).fadeInFromLeft(
+                              delay: 100.ms, animationDuration: 100.ms),
                     ),
                     Positioned(
                       right: 0,
